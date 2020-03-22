@@ -1,0 +1,27 @@
+<style>
+    body,
+    html {
+        height: 100%;
+    }
+
+    .bg {
+        background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(11).jpg");
+        height: 100%;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+
+
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 bg-white border-bottom shadow-sm">
+    <h5 class="my-0 mr-md-auto font-weight-bold">
+        <%= link_to image_tag("logo/1.jpg", width: '50px', alt: 'Logo'), home_path %></h5>
+    <nav class="my-2 my-md-0 mr-md-3">
+        <span class="p-2 text-dark font-weight-bold"><%= link_to "Home", home_path %></span>
+        <span class="p-2 text-dark font-weight-bold"><%= link_to "Companies", companies_path %></span>
+        <span class="p-2 text-dark font-weight-bold"><%= link_to "Employees", employees_path %></span>
+    </nav>
+    <span class="btn btn-outline-primary"><%= link_to "Sign up", "#"%></span>
+</div>

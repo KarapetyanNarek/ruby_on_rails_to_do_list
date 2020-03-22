@@ -1,0 +1,38 @@
+<% provide(:title, "Edit Company") %>
+
+<div class="container-fluid d-flex justify-content-center mt-5">
+
+    <%= form_for :company,  url: company_path(@company), method: :patch, class: "form-signin" do |f| %>
+    
+     <% if @company.errors.any? %>
+        <% @company.errors.full_messages.each do |msg| %>
+            <div class="alert alert-danger">
+                <%= msg %>
+            </div>
+        <% end %>
+     <% end %>
+
+    <h3 class="text-center mb-3 font-italic font-weight-bold" >Edit Company</h3>
+
+    <span id="uploade" class="btn btn-secondary btn-block mb-2 font-weight-bold btn-lg">
+        Upload logo
+        <%= f.file_field :logo %>
+    </span>
+
+    <%= f.label :name, class: "sr-only" %>
+    <%= f.text_field :name, class: "form-control mb-2 border-dark", placeholder: "Company name" %>
+
+    <%= f.label :email, class: "sr-only" %>
+    <%= f.email_field :email, class: "form-control mb-2 border-dark", placeholder: "Company email" %>
+
+    <%= f.label :website, class: "sr-only" %>
+    <%= f.text_field :website, class: "form-control mb-2 border-dark", placeholder: "Company website" %>
+
+
+
+    <%= f.submit "Edit", class: "btn btn-lg btn btn-dark font-weight-bold btn-block" %>
+    <%= link_to("Back", companies_path, {:class => 'btn btn-lg btn btn-dark font-weight-bold btn-block'}) %>
+    <% end %>
+
+
+</div>

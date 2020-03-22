@@ -1,0 +1,30 @@
+<% provide(:title, "Show") %>
+
+
+<div class="container-fluid text-center mt-5 w-25">
+
+    <div class="mb-3">
+        <%= image_tag(@company.logo, width: '200px') %>
+    </div>
+
+    <div class="container text-left show">
+        <div>
+            <span class="font-italic">Company name:</span>
+            <%= @company.name %>
+        </div>
+
+        <div>
+            <span class="font-italic">Company email: </span>
+            <%= @company.email %>
+        </div>
+
+        <div>
+            <span class="font-italic">Company website: </span>
+            <%= @company.website %>
+        </div>
+
+        <%= link_to "OK", companies_path, class: "btn btn-danger font-weight-bold btn-block mt-3" %>
+
+    </div>
+
+</div>

@@ -1,0 +1,28 @@
+<% provide(:title, "Add Employee") %>
+
+<div class="container-fluid d-flex justify-content-center mt-5">
+
+    <%= form_for :employee,  url: employees_path, class: "form-signin" do |f| %>
+    
+    <h3 id="employee" class="text-center mb-3 font-italic font-weight-bold w-400">Add Employee</h3>
+
+    <%= f.label :firstname, class: "sr-only" %>
+    <%= f.text_field :firstname, class: "form-control mb-2 border-dark", placeholder: "Employee firstname" %>
+
+    <%= f.label :lastname, class: "sr-only" %>
+    <%= f.text_field :lastname, class: "form-control mb-2 border-dark", placeholder: "Employee lastname" %>
+
+    <%= f.label :email, class: "sr-only" %>
+    <%= f.email_field :email, class: "form-control mb-2 border-dark", placeholder: "Employee email" %>
+
+    <%= f.label :phone, class: "sr-only" %>
+    <%= f.text_field :phone, class: "form-control mb-2 border-dark", placeholder: "Employee phone namber" %>
+
+
+
+    <%= f.submit "Add", class: "btn btn-lg btn btn-dark font-weight-bold btn-block" %>
+    <%= link_to("Back", employees_path, {:class => 'btn btn-lg btn btn-dark font-weight-bold btn-block'}) %>
+    <% end %>
+
+
+</div>

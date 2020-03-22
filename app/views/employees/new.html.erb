@@ -15,7 +15,7 @@
     <h3 id="uploade" class="text-center mb-3 font-italic font-weight-bold" >Add Employee</h3>
 
     <%= f.label "Select Your Company: " %>
-    <%= f.select :company, options_for_select(@companies.map { |s| s.name}) %>
+    <%= f.select :company, options_for_select(@companies.map { |s| s.name}) if !@companies.empty? %>
 
     <%= f.label :firstname, class: "sr-only" %>
     <%= f.text_field :firstname, class: "form-control mb-2 border-dark", placeholder: "Employee name" %>

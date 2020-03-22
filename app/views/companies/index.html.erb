@@ -32,7 +32,7 @@
          </tr>
          <% @companies.each do |company| %>
          <tr>
-             <td class="text-center align-middle"><%= image_tag(company.logo, width: 100) %></td>
+             <td class="text-center align-middle"><%= image_tag(company.logo, width: "100px") if company.logo.attached? %></td>
              <td class="text-center align-middle"><%= company.name %></td>
              <td class="text-center align-middle"><%= company.email %></td>
              <td class="text-center align-middle"><%= company.website %></td>

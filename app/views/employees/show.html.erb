@@ -1,0 +1,24 @@
+<% provide(:title, "Show") %>
+
+
+<div class="container-fluid text-center mt-5 w-25">
+
+    
+    <div class="container text-left show">
+        <div>
+            <span class="font-italic">Company name:</span>
+            <%= @employee.firstname %>
+        </div>
+
+        <div>
+            <span class="font-italic">Company email: </span>
+            <%= @employee.lasttname %>
+        </div>
+
+
+
+        <%= link_to "OK",employees_path, class: "btn btn-danger font-weight-bold btn-block mt-3" %>
+
+    </div>
+
+</div>

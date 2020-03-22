@@ -5,20 +5,34 @@
 
     
     <div class="container text-left show">
+
         <div>
             <span class="font-italic">Company name:</span>
+            <%= @company.name %>
+        </div>
+
+        <div>
+            <span class="font-italic">Employee firstname:</span>
             <%= @employee.firstname %>
         </div>
 
         <div>
-            <span class="font-italic">Company email: </span>
-            <%= @employee.lasttname %>
+            <span class="font-italic">Employee lastname: </span>
+            <%= @employee.lastname %>
         </div>
 
+        <div>
+            <span class="font-italic">Employee email: </span>
+            <%= @employee.email %>
+        </div>
 
-
-        <%= link_to "OK",employees_path, class: "btn btn-danger font-weight-bold btn-block mt-3" %>
+        <div>
+            <span class="font-italic">Employee phone number: </span>
+            <%= @employee.phone %>
+        </div>
 
     </div>
+
+    <%= link_to "OK",employees_path, class: "btn btn-danger font-weight-bold btn-block mt-3" %>
 
 </div>

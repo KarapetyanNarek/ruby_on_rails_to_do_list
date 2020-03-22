@@ -3,6 +3,10 @@
  <div class="m-3">
      <%= link_to("Add Company", new_company_path, {:class => 'btn btn-dark font-weight-bold'}) %>
  </div>
+ 
+
+ <%= will_paginate %>
+
 
  <div class="container-fluid">
 
@@ -43,3 +47,4 @@
          <% end %>
      </table>
  </div>
+ <%= will_paginate %>

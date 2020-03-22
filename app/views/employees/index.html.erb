@@ -4,6 +4,7 @@
     <%= link_to("Add emplyee", new_employee_path, {:class => 'btn btn-dark font-weight-bold'}) %>
 </div>
 
+<%= will_paginate %>
 <div class="container-fluid">
 
     <table class="table table-bordered table-dark col-md-12">
@@ -34,7 +35,9 @@
         </tr>
         <% @employees.each do |employee| %>
          <tr>
-             <td class="text-center align-middle"><%= emloyee.company %></td>
+        <% @company = @companies.each.select {|e| e.id == employee[:company_id]} %>
+        <% @company_name = @company[0][:name] %>
+         <td class="text-center align-middle"><%= @company_name %></td>
              <td class="text-center align-middle"><%= employee.firstname %></td>
              <td class="text-center align-middle"><%= employee.lastname %></td>
              <td class="text-center align-middle"><%= employee.email %></td>
@@ -46,3 +49,4 @@
          <% end %>
     </table>
 </div>
+<%= will_paginate %>
